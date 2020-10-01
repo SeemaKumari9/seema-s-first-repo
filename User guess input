@@ -14,11 +14,11 @@ while(userGuess != randNumber):
         else:
             print("You guessed it wrong! Enter a larger number")
 
-print(f"You guessed the number in {guesses} guesses")
+print(f" {guesses} number of guesses")
 with open("hiscore.txt", "r") as f:
     hiscore = int(f.read())
 
 if(guesses<hiscore):
-    print("You just broke the high score!")
+    print("You just broke the highest score!")
     with open("hiscore.txt", "w") as f:
         f.write(str(guesses))
